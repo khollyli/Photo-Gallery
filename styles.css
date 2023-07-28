@@ -26,8 +26,8 @@ body {
     container are called 'flex items'.
     .gallery is now a flex container */
     display: flex;
-    /* Flexbox has a main and cross axis. The main axis is defined by the 'flex-direction' property, which has
-    four possible values:
+    /* Flexbox has a main and cross axis. The main axis is defined by the 'flex-direction' property,
+    which has four possible values:
     - row (default): horizontal axis with flex items from left to right
     - row-reverse: horizontal axis with flex items from right to left
     - column: vertical axis with flex items from top to bottom
@@ -38,6 +38,21 @@ body {
     items to wrap to the next row or column. 'nonwrap' (default) will
     prevent your items from wrapping and shrink them if needed. */
     flex-wrap: wrap;
+    /* The 'justify-content' property determines how the
+    items inside a flex container are positioned along the main axis,
+    affecting their position and the space around them. */
+    justify-content: center;
+    /* The 'align-items property position the flex content along the cross axis.
+    In this case, with your 'flex-direction' set to 'row', your cross axis would be vertical. */
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    /* The 'gap' CSS shorthand property sets the gaps, also known as gutters,
+    between rows and columns. The 'gap' property and its 'row-gap' and 'column-gap'
+    sub-properties provide this functionality for flex, grid, and multi-column layout.
+    You apply the property to the container */
+    gap: 16px;
 }
 
 /* Class selector | To select elements in a div with a class selector */
@@ -45,4 +60,10 @@ body {
     width: 100%;
     max-width: 350px;
     height: 300px;
+    /* Rather than seeting each aspect ratio individually, you can use the 'object fit' property
+    to determine how images should behave.
+    This will tell the image to fill the 'img' container while maintaining aspect ratio,
+    resulting in cropping to fit. */
+    object-fit: cover;
+    border-radius: 10px;
 }
